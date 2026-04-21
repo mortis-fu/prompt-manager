@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  button,
+  input,
+  textarea {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .primary-button {
+    @apply inline-flex min-h-10 items-center justify-center gap-2 rounded-lg bg-stone-950 px-4 py-2 text-sm font-medium text-white transition hover:bg-stone-800;
+  }
+
+  .secondary-button {
+    @apply inline-flex min-h-10 items-center justify-center rounded-lg border border-stone-200 bg-white px-4 py-2 text-sm font-medium text-stone-700 transition hover:bg-stone-50;
+  }
+
+  .toolbar-button,
+  .icon-text-button {
+    @apply inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-stone-200 bg-white px-3 py-2 text-sm font-medium text-stone-600 shadow-sm transition hover:border-stone-300 hover:bg-stone-50;
+  }
+
+  .toolbar-button-active {
+    @apply border-stone-950 bg-stone-950 text-white hover:bg-stone-900;
+  }
+
+  .icon-button {
+    @apply inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-stone-200 bg-white text-stone-500 shadow-sm transition hover:border-stone-300 hover:bg-stone-50 hover:text-stone-950;
+  }
+
+  .danger-icon-button {
+    @apply inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-red-100 bg-red-50 text-red-500 shadow-sm transition hover:bg-red-100;
+  }
+
+  .search-input {
+    @apply h-11 w-full rounded-lg border border-stone-200 bg-white py-2 pl-10 pr-4 text-sm shadow-sm outline-none transition placeholder:text-stone-400 focus:border-stone-400 focus:ring-4 focus:ring-stone-200/60;
+  }
+
+  .filter-button {
+    @apply flex min-h-9 items-center justify-between rounded-lg px-3 py-2 text-left text-sm text-stone-600 transition hover:bg-stone-100;
+  }
+
+  .filter-button-active {
+    @apply bg-stone-200/70 font-medium text-stone-950 hover:bg-stone-200;
+  }
+
+  .tag-filter {
+    @apply rounded-full border border-stone-200 bg-white px-3 py-1.5 text-xs font-medium text-stone-500 transition hover:border-stone-300 hover:text-stone-950;
+  }
+
+  .tag-filter-active {
+    @apply border-stone-900 bg-stone-950 text-white hover:text-white;
+  }
+
+  .prompt-card {
+    @apply cursor-pointer rounded-lg border border-stone-200 bg-[#fffdf9] p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-stone-300 hover:shadow-soft;
+  }
+
+  .prompt-card-active {
+    @apply border-stone-950 ring-4 ring-stone-200;
+  }
+
+  .category-pill {
+    @apply inline-flex items-center rounded-md bg-stone-100 px-2 py-1 text-xs font-semibold text-stone-600;
+  }
+
+  .mini-tag {
+    @apply rounded-full bg-stone-100 px-2.5 py-1 text-xs font-medium text-stone-500;
+  }
+
+  .detail-tag {
+    @apply inline-flex items-center gap-1 rounded-full border border-stone-200 bg-white px-3 py-1.5 text-xs font-medium text-stone-500;
+  }
+
+  .detail-panel {
+    @apply rounded-lg border border-stone-200 bg-[#fffdf9] p-5 shadow-sm md:p-7;
+  }
+
+  .prompt-body {
+    @apply min-h-[340px] whitespace-pre-wrap rounded-lg border border-stone-200 bg-[#f8f7f3] p-5 text-sm leading-7 text-stone-700;
+  }
+
+  .field-label {
+    @apply grid gap-2 text-sm font-semibold text-stone-700;
+  }
+
+  .field-input,
+  .field-textarea {
+    @apply w-full rounded-lg border border-stone-200 bg-white px-3 py-2.5 text-sm font-normal text-stone-900 outline-none transition placeholder:text-stone-400 focus:border-stone-400 focus:ring-4 focus:ring-stone-200/60;
+  }
+
+  .field-textarea {
+    @apply min-h-[280px] resize-y leading-7;
+  }
+
+  .empty-state {
+    @apply flex flex-col items-center justify-center rounded-lg border border-dashed border-stone-300 bg-white/60 p-10 text-center text-sm font-medium text-stone-400;
+  }
+}
